@@ -10,10 +10,10 @@ In thr furture i will use git to keep everything i learn here.Hope will have a g
 ==========
 1.克隆代码
 ----------
-#git clone ip
+git clone ip
 
-##ctrl+insert 复制
-##shift_insert 粘贴
+ctrl+insert 复制
+shift_insert 粘贴
 
 
 2.创建分支
