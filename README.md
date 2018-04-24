@@ -82,24 +82,24 @@ git tag -a 版本号 -m 注释
 ----------
 git push origin 版本号
 
-7. 删除远程分支
+7.删除远程分支
 ----------
 git push origin --delete 分支
 
-8. 查看版本号
+8.查看版本号
 ----------
  git tag 
 
-9. 删除版本号
+9.删除版本号
 ----------
  git tag -d 版本号
 
 
-10. 删除远程版本号
+10.删除远程版本号
 ----------
  push origin --delete tag 版本号
 
-11. 缓存修改的代码
+11.缓存修改的代码
 ----------
  git stash
 
@@ -108,12 +108,16 @@ git push origin --delete 分支
 1.运行 $ git remote add origin git@github.com:yourName/yourRepo.git命令时提示下面的错误。<br>
 fatal: Not a git repository (or any of the parent directories): .git
 -----------------
-
-
 提示说没有.git这样一个目录，解决办法如下：运行git init就可以了！
 
-2.Git使用之(pathspec master did not match any file(s) known to git)
+
+
+
+2.Git使用体质(pathspec master did not match any file(s) known to git)
 ----------
+解决办法：进入到仓库而不是上一级目录
+
+
 
 
 3.执行git push origin 分支名，提示 Pulling is not possible because you have unmerged files.
