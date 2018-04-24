@@ -63,20 +63,20 @@ git tag -a 版本号 -m 注释
 6.推送版本
 git push origin 版本号
 
-7.删除远程分支
+7. 删除远程分支
 git push origin --delete 分支
 
-8.查看版本号
+8. 查看版本号
  git tag 
 
-9.删除版本号
+9. 删除版本号
  git tag -d 版本号
 
 
-10.删除远程版本号
+10. 删除远程版本号
  push origin --delete tag 版本号
 
-11.缓存修改的代码
+11. 缓存修改的代码
  git stash
 
 遇到的问题和解决办法：
