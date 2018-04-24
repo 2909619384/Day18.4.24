@@ -113,7 +113,7 @@ fatal: Not a git repository (or any of the parent directories): .git
 
 
 
-2.Git使用体质(pathspec master did not match any file(s) known to git)
+2.Git使用提示(pathspec master did not match any file(s) known to git)
 ----------
 解决办法：进入到仓库而不是上一级目录
 
