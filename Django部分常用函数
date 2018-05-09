@@ -1,0 +1,43 @@
+以下截取某工程部分代码展示部分函数的使用
+ -----------------------------------
+    以下函数的使用，可以帮助我们利用Django框架，不用写mysql语句既可以实现对数据库的操作。
+ #查询所有女生的信息
+    # stus = Student.objects.filter(stu_sex=False)
+    # stus = Student.objects.get(stu_name=False)
+    #查询id从大到小，从小到大去掉减号
+    # stus = Student.objects.all().order_by('-id')
+    #获取ID最大的一条数据
+    stus = Student.objects.all().order_by('-id').first()
+    # stus = Student.objects.all().order_by('-id').last()
+    #获取男生的数据的个数
+    # stus = Student.objects.filter(stu_sex=True).count()
+
+    #查询所有80后女生的信息
+    # stus = Student.objects.filter(stu_sex=False,
+    #                               stu_birth__gte='1980-01-01',
+    #                               stu_birth__lte='1990-01-01')
+    #查询姓李的数据
+    # stus = Student.objects.filter(stu_name__startswith='李')
+    #查询以花结束的数据
+    # stus = Student.objects.filter(stu_name__endswith='花')
+
+
+    #姓名中包含李的数据
+    # stus = Student.objects.filter(stu_name__contains='李')
+
+    #判断一个姓名是否存在
+    # stus = Student.objects.filter(stu_name='cc').exists()
+
+    # #获取指定多个id的值
+    # ids = [1,4]
+    # stus = Student.objects.filter(id__in=(ids))
+
+    #查询语文成绩大于等于数学成绩的学生
+    stus = Student.objects.filter(stu_yuwen__gte=F('stu_shuxue'))
+
+    #  查询语文成绩大于等于数学10分成绩的学生
+
+    # stus = Student.objects.filter(stu_yuwen__gte=F('stu_shuxue')+10)
+
+    #查询学生姓名不叫李白的，或者语文成绩大于80分的学生
+    stus = Student.objects.filter(~Q(stu_name='李白') | Q(stu_yuwen__gt=80))
